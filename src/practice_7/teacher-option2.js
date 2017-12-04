@@ -9,16 +9,16 @@ class teacher extends Person
 	}
 	introduce(){
 		var str;
-		if(this.klass.number == null){
+		if(this.klass == null){
 			str = " I am a Teacher. I teach No Class.";
 		}else{
 			str = " I am a Teacher. I teach Class "+this.klass.number+".";
 		}
 		return super.introduce()+str;
 	}
-	introduceWith(Student student){
+	introduceWith(student){
 		var str;
-		if(student.klass.bumber == this.klass.number){
+		if(student.klass.number == this.klass.number){
 			str =" I am a Teacher. I teach Jerry.";
 		}else{
 			str=" I am a Teacher. I don't teach Jerry.";
@@ -27,4 +27,3 @@ class teacher extends Person
 	}
 }
 module.exports = teacher;
-
